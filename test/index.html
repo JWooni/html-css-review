@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <a href="https://www.google.co.kr/" target="_blank" class="btn">Google</a>
+  <!-- <a href="./README.md">README.md</a>
+  <a href="./images/chelsea.jpg" download>Img Download</a> -->
+  <hr>
+
+  <ul>
+    <li><a href="#title1">제목1</a></li>
+    <li><a href="#title2">제목2</a></li>
+  </ul>
+  <h2 id="title1">제목1</h2>
+  <h2 id="title2">제목2</h2>
+  <h2 id="title3">제목3</h2>
+
+  Using <abbr title="HyperText Markup Language">HTML</abbr> is fun and easy!
+
+  <hr>
+
+  <P>
+    <b>1절</b>
+    <mark>동해물과 백두산이 마르고</mark> 닳도록
+    하느님이 보우하사 우리나라 만세
+
+    <b>2절</b>
+    남산 위에 저 소나무 철갑을 두른 듯
+    <em>바람서리 <em>불변함</em>은</em> 우리 기상일세
+
+    <b>3절</b>
+    <strong>가을 하늘 공활한데 높고 구름 없이</strong>
+    밝은 달은 우리 가슴 일편담심일세
+
+    <b>4절</b>
+    이 기상과 이 맘으로 충성을 다하여
+    괴로우나 즐거우나 나라 사랑하세
+
+    <b>(후렴)</b>
+    무궁화 삼천리 화려강산
+    대한사람 대한으로 길이 보전하세
+  </P>
+
+  <br>
+
+  <cite>The Scream</cite> by Edward Munch. Painted in 1893.
+
+  <br>
+
+  <code>document.getElementById('id-value')</code> is a piece of computer code.
+
+  <br>
+
+  <kbd>Crtl</kbd> + <kbd>Alt</kbd> + <kbd>k</kbd>
+
+  <br>
+
+  X<sup>4</sup> + Y<sup>2</sup>, H<sub>2</sub>O
+
+  <br>
+
+  <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde
+    Park.</p>
+
+  <p>
+    동해물과 <span class="bold">백두산</span>이 마르고 닳도록<br />
+    하느님이 보우하사 우리나라 만세
+  </p>
+
+
+  <!-- 수정TAG -->
+  <!-- del 삭제 중앙선-->
+  <!-- ins 추가 밑줄 -->
+  <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+  <img srcset="./images/chelsea.jpg 400w,
+          ./images/chelsea.jpg 700w,
+          ./images/chelsea.jpg 1000w" src="./images/chelsea.jpg" alt="CHELSEA" />
+
+  <br>
+
+  <audio src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" controls autoplay
+    muted></audio>
+
+  <br>
+
+  <video controls width="250">
+
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+    Sorry, your browser doesn't support embedded videos.
+  </video>
+
+  <figure>
+    <img src="./images/chelsea.jpg" alt="CHELSEA">
+    <figcaption>첼시 챔스 우승 기원</figcaption>
+  </figure>
+
+  <br>
+
+  <p>우리 페이지야!</p>
+  <div>
+    <img src="./images/chelsea.jpg" alt="첼시">
+  </div>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/4TWR90KJl84" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <canvas id="canvas" width="200" height="150"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'rgb(200, 0, 0)';
+    ctx.fillRect(10, 10, 50, 50);
+    ctx.fillStyle = 'rgb(0, 0, 200, 0.5)';
+    ctx.fillRect(30, 30, 50, 50);
+  </script>
+
+  <br>
+
+  <div id="my-name">Jwooni!</div>
+
+  안녕하세요!
+  <noscript>
+    자바스크립트를 지원하지 않는 환경입니다~
+  </noscript>
+
+  <table class="table">
+    <tr>
+      <th colspan="2" id="th-data">데이터</th>
+    </tr>
+    <tr>
+      <th abbr="Type" scope="col" headers="th-data">타입</th>
+      <th abbr="Value" scope="col" headers="th-data">값</th>
+    </tr>
+    <tr>
+      <td>알파벳</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>숫자</td>
+      <td>7</td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <caption>데이터 타입과 값</caption>
+    <tr>
+      <th rowspan="2" id="th-data">데이터</th>
+      <th headers="th-data" id="th-type">타입</th>
+      <td headers="th-type">알파벳</td>
+      <td headers="th-type">숫자</td>
+    </tr>
+    <tr>
+      <th headers="th-data" id="th-type">값</th>
+      <td headers="th-value">A</td>
+      <td headers="th-value">7</td>
+
+    </tr>
+  </table>
+
+  <br>
+
+  <table>
+    <caption>데이터 타입과 값</caption>
+
+    <colgroup>
+      <col>
+      <col style="background-color: tomato;" span="2">
+    </colgroup>
+    <tr>
+      <th></th>
+      <th>타입</th>
+      <th>값</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>알파벳</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>숫자</td>
+      <td>7</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table>
+    <caption>Fruits</caption>
+    <colgroup>
+      <col span="2" style="background-color: yellowgreen;">
+      <col style="background-color: tomato;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>F123A</td>
+        <td>Apple</td>
+        <td>$22</td>
+      </tr>
+      <tr>
+        <td>F098B</td>
+        <td>Banana</td>
+        <td>$19</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>F129C</td>
+        <td>Cherry</td>
+        <td>$53</td>
+      </tr>
+    </tfoot>
+  </table>
+
+
+
+</body>
+
+</html>
