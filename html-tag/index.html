@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>HTML Elements</title>
   <link rel="stylesheet" href="./css/main.css">
   <script defer src="./js/main.js"></script>
 </head>
 
-<body>
+<>
   <a href="https://www.google.co.kr/" target="_blank" class="btn">Google</a>
   <!-- <a href="./README.md">README.md</a>
   <a href="./images/chelsea.jpg" download>Img Download</a> -->
@@ -134,6 +134,7 @@
     자바스크립트를 지원하지 않는 환경입니다~
   </noscript>
 
+  <!-- Table Tag -->
   <table class="table">
     <tr>
       <th colspan="2" id="th-data">데이터</th>
@@ -230,8 +231,161 @@
     </tfoot>
   </table>
 
+  <!-- form Tag -->
+  <form action="/login" method="GET">
+    <input type="email" name="email">
+    <input type="password" name="password">
+    <button type="submit">로그인</button>
+  </form>
+
+  <!-- Input Tag -->
+  <form action="/login" method="GET">
+    <input type="email" name="id">
+    <input type="password" name="pw">
+    <input type="submit" value="로그인">
+  </form>
+
+  <input type="number">
+
+  <input type="checkbox" checked>
+
+  <input type="file">
+
+  <form action="/login">
+    <input type="image" src="./images/chelsea.jpg" alt="CHELSEA">
+  </form>
+
+  <input type="radio" name="radio">
+  <input type="radio" name="radio" checked>
+  <input type="radio" name="radio">
+
+  <form action="/login">
+    <input type="text" name="id">
+    <input type="password" name="pw">
+    <input type="submit" value="로그인">
+    <input type="reset" value="초기화">
+  </form>
+  <input type="text">
+
+  <hr>
+
+  <!-- label Tag -->
+  <!-- 라벨 가능 요소를 참조 -->
+  <input type="checkbox" id="user-agreement" />
+  <label for="user-agreement">동의하십니까?</label>
+
+  <!-- 라벨 가능 요소를 포함 -->
+  <label><input type="checkbox" />동의하십니까?</label>
+
+  <label>
+    검색<input type="search">
+  </label>
+
+  <hr>
+
+  <!-- button Tag -->
+  <button>전송</button>
+  <input type="reset" value="초기화">
+  <button type="reset">초기화</button>
+
+  <input type="submit" value="제출">
+  <button type="submit">제출</button>
+
+  <button onclick="doit()">클릭하세요!</button>
+
+  <script>
+    function doit() {
+      alert('클릭했습니다!');
+    }
+  </script>
+
+  <hr>
+
+  <!-- textarea Tag -->
+  <textarea rows="6" placeholder="설명을 입력하세요!"></textarea>
+
+  <hr>
+
+  <!-- fieldset, legend Tag -->
+  <form>
+    <fieldset>
+      <legend>Coffee Size</legend>
+      <label>
+        <input type="radio" name="size" value="tall" />
+        Tall
+      </label>
+      <label>
+        <input type="radio" name="size" value="grande" />
+        Grande
+      </label>
+      <label>
+        <input type="radio" name="size" value="venti" />
+        Venti
+      </label>
+    </fieldset>
+  </form>
+
+  <hr>
+
+  <!-- select, datalist, optgroup, option -->
+  <select name="fruits">
+    <optgroup label="내가 좋아하는 과일">
+      <option>Apple</option>
+      <option>Orange</option>
+      <option>Banana</option>
+    </optgroup>
+    <optgroup label="내가 싫어하는 과일">
+      <option>Mango</option>
+      <option>Fineapple</option>
+    </optgroup>
+  </select>
+
+  <!-- batalist -->
+  <input type="text" list="fruits">
+
+  <datalist id="fruits">
+    <option>Apple</option>
+    <option>Orange</option>
+    <option>Banana</option>
+    <option>Mango</option>
+    <option>Fineapple</option>
+  </datalist>
+
+  <select>
+    <optgroup label="Coffee">
+      <option>Americano</option>
+      <option>Caffe Mocha</option>
+      <option label="Cappuccino" value="Cappuccino"></option>
+    </optgroup>
+    <optgroup label="Latte" disabled>
+      <option>Caffe Latte</option>
+      <option>Vanilla Latte</option>
+    </optgroup>
+    <optgroup label="Smoothie">
+      <option>Plain</option>
+      <option>Strawberry</option>
+      <option>Banana</option>
+      <option>Mango</option>
+    </optgroup>
+  </select>
+
+  <hr>
+
+  <!-- progress -->
+  <progress value="90" max="100">70 %</progress>
+  <progress value=".7">70 %</progress>
+  <progress class="prog" value="0" max="100"></progress>
+  <script>
+    const progerss = document.querySelector('.prog');
+    const interval = setInterval(function(){
+      progerss.value += 10;
+      if(progerss.value >= 100){
+        clearInterval(interval)
+      }
+    }, 1000)
+  </script>
 
 
-</body>
+  </body>
 
 </html>

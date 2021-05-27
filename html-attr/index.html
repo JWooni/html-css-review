@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML ATTRIBUTES</title>
+  <!-- <link rel="stylesheet" href="./css/main.css"> -->
+  <style>
+    .section {
+      width: 100px;
+      height: 100px;
+      color: white;
+      background-color: blue;
+    }
+
+    #section {
+      height: 200px;
+      position: relative;
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- class, id -->
+  <!-- class 속성 중복 허용 -->
+  <div class="section">첼</div>
+  <div class="section">시</div>
+  <div class="section">챔</div>
+  <div class="section">스</div>
+  <div class="section">우</div>
+  <!-- id 속성 중복 불가 (단 하나) -->
+  <div id="section">승</div>
+
+  <script>
+    const section = document.querySelector('.section');
+    const sectionId = document.getElementById('section');
+  </script>
+
+  <br>
+
+  <!-- style 속성 -->
+  <h1 style="color: blue; background-color: yellow;">첼시 챔스 우승</h1>
+
+  <!-- tittle -->
+  <h2 title="챔스는 첼시가 우승합니다!!!">첼시우승</h2>
+  <a href="https://google.com" title="GOOGLE.com" target="_blank">Goolge</a>
+  <div title="DIV 태그입니다.">DIV</div>
+
+  <hr>
+
+  <!-- lang 속성 -->
+  <p lang="en">This paragraph is English</p>
+  <p lang="ko">이 단락은 한글입니다.</p>
+  <p lang="fr">Ce paragraphe est défini en français.</p>
+
+  <hr>
+
+  <!-- data-* 속성 -->
+  <!-- data-custom-data-attributes -->
+  <div id="me" data-my-name="JWooni" data-my-age="924">JWooni</div>
+  <script>
+    const me = document.getElementById('me');
+    console.log(me.dataset.myName);
+    console.log(me.dataset.myAge);
+  </script>
+
+  <hr>
+
+  <!-- draggable -->
+  <div draggable="true">빅이어 주인 첼시!</div>
+
+  <hr>
+
+  <!-- hidden -->
+  <form id="hidden-form" action="/form-action" hidden>
+    <!-- 숨겨진 양식들.. -->
+    <input type="text" name="id" value="Jwooni">
+  </form>
+  <button form="hidden-form" type="submit">전송</button>
+
+  <hr>
+
+  <!-- tabindex -->
+  <input type="text" value="1" tabindex="2">
+  <input type="text" value="2">
+  <div tabindex="0">2.5</div>
+  <input type="text" value="3" tabindex="1">
+  <input type="text" value="4" tabindex="-1">
+  <input type="text" value="5" tabindex="3">
+
+  <h1 tabindex="0">Sign In</h1>
+  <label>Username: <input type="text"></label>
+  <label>Password: <input type="password"></label>
+  <label>PS: <input type="text" tabindex="-1"></label>
+  <input type="submit" value="Sign In">
+
+  <hr>
+
+  <!-- 주석 -->
+  <!-- 이 링크는 구글 홈페이지로 이동합니다. -->
+  <a href="https://google.com">GOOGLE</a>
+
+</body>
+
+</html>
