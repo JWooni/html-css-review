@@ -1,0 +1,57 @@
+/* CSS 단위 */
+/* px
+    가장 기본적으로 사용되는 단위
+    이것은 픽셀단위라는 고정값에 따라 정해지기 때문에 
+    화면의 크기나 확대와 같이 사용자가 임의로 정의할 수 없는 고정된 값.
+*/
+/* %
+    percent, 기본글꼴의 크기에 대하여 상대적인 값을 가짐.
+*/
+/* em 
+    해당 Element의 font-size에 대한 비율(2em은 font-size의 2배 사이즈)
+*/
+/* rem
+    Root Element(html)의 font-size에 대한 비율
+*/
+/* vw
+    Viewport width의 1%에 대한 비율
+*/
+/* vh
+    Viewport height의 1%에 대한 비율
+*/
+/* vmin
+    Viewport smaller dimension의 1%에 대한 비율
+ */
+/* vmax
+    Viewport larger dimension의 1%에 대한 비율
+  */
+
+html {
+  font-size: 10px;
+}
+
+body * {
+  border: 2px solid;
+}
+
+.container {
+  /* width: 60em; */
+  /* font-size: 15px; */
+  /* width: 50vmax; */
+  width: 50vmin;
+  height: 300px;
+  background-color: blue;
+}
+
+.parent {
+  /* width: 300px; */
+  width: 30em;
+  font-size: 2em;
+}
+
+.child {
+  /* width: 150px; */
+  /* width: 15em; */
+  width: 20rem;
+  font-size: 2em;
+}

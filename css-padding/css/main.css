@@ -1,0 +1,20 @@
+/* padding */
+/* 요소의 '내부(안) 여백'을 지정 */
+/* 크기 증가 현상 */
+/* padding: 위 우 아래 좌 */
+/* padding: 위 [좌,우] 아래*/
+/* padding: [위,아래] [좌,우] */
+/* padding: [위, 우, 아래, 좌] */
+
+/* padding 개별 속성 */
+/* padding-top: */
+/* padding-right: */
+/* padding-bottom: */
+/* padding-left: */
+.padding-div {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  padding: 20px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,21 @@
+/* after */
+/* 요소 내부 뒤에 내용을 삽입 */
+.after {
+  font-size: 400px;
+}
+
+.after li::after {
+  content: url("https://i.pinimg.com/originals/82/8d/63/828d63493bf58ff5a13626d053e451c1.jpg");
+}
+
+.div-div {
+  font-size: 100px;
+}
+
+.div-div::before {
+  content: "<";
+}
+
+.div-div::after {
+  content: ">";
+}

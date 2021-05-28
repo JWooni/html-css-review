@@ -1,0 +1,15 @@
+/* box-sizing */
+/* 요소의 크기 계산 기준을 지정 */
+/* 
+    값              의미
+    content-box     너비(width, height)만으로 요소의 크기를 계산
+    border-box      너비(width, height)에 안쪽 여백(padding)과 
+                    테두리 선(border)를 포함하여 요소의 크기를 계산
+*/
+.box-sizing-div {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  padding: 40px;
+  border: 10px solid red;
+}

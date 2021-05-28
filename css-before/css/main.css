@@ -1,0 +1,14 @@
+/* 가상 요소 선택자 */
+/* before */
+/* 요소 내부의 앞에 내용을 삽입 */
+/* 가상 요소 선택자는 content 속성이 필수 */
+ul {
+  font-size: 40px;
+}
+
+ul li::before {
+  content: "숫자";
+  font-weight: bold;
+  color: red;
+  margin-right: 20px;
+}
