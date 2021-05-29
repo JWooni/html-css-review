@@ -1,0 +1,166 @@
+/* font */
+/* 글자 관련 속성들을 지정 */
+/* 
+    값              의미
+    font-style      글자 기울기 지정
+    font-weight     글자 두께 지정
+    font-size       글자 크기 지정
+    line-height     줄높이(줄간격) 지정
+    font-family     글꼴(서체) 지정
+*/
+
+/* font-style */
+/* 글자 스타일(기울기) 지정 */
+/* 
+    값          의미
+    normal      스타일 없음
+    italic      이텔릭체
+    oblique     기울어진 글자
+*/
+
+p{
+    font-size: 40px;
+    font-style: initial;
+}
+
+
+/* font-weight */
+/* 글자의 두계(가중치)를 지정 */
+/* 
+    값          의미
+    normal      기본 글자 두께, 400과 동일
+    bold        글자 두껍게, 700과 동일
+    bolder      부모(상위) 요소보다 더 두껍게 (bold보다 두껍다는 개념이 아님)
+    lighter     부모(상위) 요소보다 더 얇게
+    숫자        100부터 900까지의 100단위 숫자 9개, normal과 bold 이외의 두께를 제공하는 글꼴(서체)을 위한 설정
+*/
+/* 숫자 값과 두께의 불일치 */
+/* 글꼴(서체)의 정확한 두께를 숫자로 표현할 수 없는 경우 */
+/* 1. 400이 주어지면 500을 사용하고, 500이 불가하면 500 미만의 다른 두께 사용 */
+/* 2. 500이 주어지면 400을 사용하고, 400이 불가하면 400 미만의 다른 두께 사용 */
+/* 3. 400 미만 값이 주어지면, 가장 가까운 숫자의 얇은 두께 사용 */
+/* 4. 500 초과 값이 주어지면, 가장 가까운 숫자의 두꺼운 두께 사용 */
+
+
+/* font-size */
+/* 글자의 크기 */
+/* 
+    값          의미
+    단위        px, pm, cm 등 단위로 지정
+    %           부모(상위) 요소의 비율로 지정
+    xx-small    가장 작은 크기
+    x-small     더 작은 크기
+    small       작은 크기
+    medium      중간 크기
+    large       큰 크기
+    x-large     더 큰 크기
+    xx-large    가장 큰 크기
+    smaller     부모(상위) 요소보다 작은 크기
+    larger      부모(상위) 요소보다 큰 크기
+*/
+div {
+    font-size: 60px;
+}
+
+
+/* line-height */
+/* 줄 높이(줄 간격) 지정 */
+/* 
+    값      의미
+    normal  브라우저의 기본 정의를 사용
+    숫자    요소 자체 글꼴 크기의 배수로 지정
+    단위    px, em, cm 등 단위로 지정
+    %       요소 자체 글꼴 크기의 비율로 지정
+*/
+
+/* font-family */
+/* 글꼴(서체) 지정 */
+/* 
+    값          의미
+    serif       글꼴(서체 후보) 목록을 지정
+    sans-serif  글꼴 계열 이름 지정
+    monospace
+    cursive
+    fantasy
+*/
+.serif{
+    font-family: serif;
+}
+.sans-serif {
+    font-family: sans-serif;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+
+/* 문자(Test) 관련 속성 */
+/* 1. color */
+/*
+    값      의미                기본값
+    색상    문자의 색상을 지정  rgb(0, 0, 0)
+ */
+/* 색상 표현
+    표현            의미                                예시
+    색상이름        브라우저에서 제공하는 색상의 이름    red, blue  
+    Hex색상코드     16진수 색상                         #000000
+    RGB             빛의 삼원색                         rgb(255, 255, 255)
+    RGBA            빛의 삼원색, 투명도                 rgba(255, 0, 0, 255)
+    HSL             색상, 채도, 명도                    hsl(120, 100%, 50%)
+    HSLA            색상, 채도, 명도, 투명도            hsla(120, 100%, 50%, .3)
+ */
+
+
+/* 2. text-align */
+/* 문자 정렬 방식을 지정 */
+/* 
+    값          의미
+    left        왼쪽 정렬
+    right       오른쪽 정렬
+    center      가운데 정렬
+    justify     양쪽 맞춤
+*/
+.textalign-div{
+    text-align: center;
+}
+
+
+/* 3. text-decoration */
+/* 문자의 장식(line)을 설정 */
+/* 
+    값              의미
+    none            선 없음
+    underline       밑줄을 지정
+    overline        윗줄을 지정
+    line-through    중앙 선(가로지르는)을 지정
+*/
+.jwooni{
+    font-size: 80px;
+    text-decoration: underline;
+}
+
+/* 4. text-indent */
+/* (첫번째 줄의) 들여쓰기를 지정 */
+
+/* 5. letter-spacing */
+/* 문자의 자간(글자 사이 간격)을 설정 */
+/* 
+    값      의미
+    normal  단어 사이의 일반 간격
+    단위    px, em, cm 등 단위로 지정
+*/
+
+/* 6. word-spacing */
+/* 단어 사이(띄어쓰기)의 간격을 설정 */
+/* 
+    값      의미
+    normal  단어 사이의 일반 간격
+    단위    px, em, cm 등 단위로 지정
+*/
+
+
