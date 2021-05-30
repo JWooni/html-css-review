@@ -1,0 +1,14 @@
+/* backface-visibility */
+/* 3D 변환으로 회전된 요소의 뒷면 숨김을 설정 */
+/* 
+    값          의미
+    visible     뒷면 숨기지 않음
+    hidden      뒷면 숨김
+*/
+img {
+  width: 300px;
+  border: 1px solid lightgray;
+  transition: 1s;
+  transform: perspective(400px) rotateY(45deg);
+  backface-visibility: hidden;
+}

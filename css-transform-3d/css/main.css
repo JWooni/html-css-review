@@ -1,0 +1,109 @@
+/* transform */
+/* 요소의 변환 효과(변형)를 지정 */
+/* transform 3D 변환 함수 */
+/* 
+    값(변환함수)                                            의미
+    translate3d(x, y, z)                                    이동(x축 y축, z축)
+    translateZ(z)                                           이동(z축)
+    scale3d(x, y, z)
+    scaleZ(z)
+    rotate3d(x, y, z, a)
+    rotateX(x)
+    rotateY(y)
+    rotateZ(z)
+    perspective(n)
+    matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n)
+*/
+/* img{
+    width: 300px;
+    border: 1px solid lightgray;
+    transition: 1s;
+    transform: perspective(500px) rotateY(-45deg);
+} */
+
+
+/* transform 변환 속성 */
+/* 
+    속성                    의미
+    transform-origin        요소 변환의 기준점을 설정
+    transform-style         3D 변환 요소의 자식 요소도 3D 변환을 사용할지 설정
+    perspective             하위 요소를 관찰하는 원근 거리를 설정
+    perspective-origin      원근 거리의 기준점을 설정
+    backface-visibility     3D 변환으로 회전된 요소의 뒷면 숨김을 설정
+*/
+/* transform-origin */
+/* 요소 변환의 기준점을 설정 */
+/* 
+    값      의미
+    X축     left, right, center
+    Y축     top, bottom, center
+    Z축     단위
+*/
+/* img {
+    width: 200px;
+    border: 1px solid red;
+    transition: 1s;
+    transform: rotate(045deg);
+    transform-origin: right left;
+} */
+
+
+/* transform-style */
+/* 3D 변환 요소의 자식 요소도 3D 변환을 사용할지 설정 */
+/* 
+    값              의미
+    flat            자식 요소의 3D 변환을 사용하지 않음
+    preserve-3d     자식 요소의 3D 변환을 사용함
+*/
+.perspective {
+    width: 200px;
+    perspective: 600px;
+    perspective-origin: 100% 200%;
+    padding: 70px;
+}
+
+.grand-parent {
+    width: 200px;
+    border: 3px solid dodgerblue;
+    transition: 1s;
+    transform: rotateX(-45deg);
+    transform-style: preserve-3d;
+}
+
+.parent {
+    width: 200px;
+    border: 3px solid tomato;
+    transition: 1s;
+    transform: rotateY(45deg);
+    transform-style: preserve-3d;
+}
+
+img {
+    width: 200px;
+    border: 3px solid greenyellow;
+    transition: 1s;
+    transform: rotateX(45deg);
+}
+
+/* perspective */
+/* 하위 요소를 관찰하는 원근 거리를 설정 */
+/* 
+    값      의미
+    단위    px, em, cm 등 단위로 지정
+*/
+
+/* perspective 속성과 함수의 차이점 */
+/* 
+    속성/함수                   적용대상                기준점 설정
+    perspective                 관찰 대상의 부모 요소   perspective-origin
+    transform: perspective()    관찰 대상              transform-origin
+*/
+
+/* perspective-origin */
+/* 원근 거리의 기준점을 설정 */
+/* 
+    값      의미
+    X축     left, right, center, %, 단위
+    Y축     top, bottom, center, %, 단위
+*/
+

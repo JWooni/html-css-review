@@ -1,0 +1,43 @@
+/* transform */
+/* 요소의 변환 효과(변형)를 지정 */
+/* 
+    transform 2D 변환 함수
+    값(변환함수)                의미
+    translate(x, y)             이동(X축, Y축)
+    translateX(x)               이동(X축)
+    translateY(y)               이동(Y축)
+    scale(x, y)                 크기(X축, Y축)
+    scaleX(x)                   크기(X축)
+    scaleY(y)                   크기(Y축)
+    rotate(degree)              회전(각도)
+    skew(x-deg, y-deg)          기울임(X축, Y축)
+    skewX(x-deg)                기울임(X축)
+    skewY(y-deg)                기울임(Y축)
+    matrix(n, n, n, n, n, n)    2차원 변환 효과
+*/
+.box {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: 1s;
+
+}
+
+.box:hover{
+    /* 이동 */
+    /* transform: translate(30px, 30px); */
+    
+    /* 크기 (음수는 축소) */
+    /* transform: scale(2); */
+
+    /* 기울임 */
+    transform: translate(20px, 10px) skew(10deg, 5deg);
+
+
+}
+
