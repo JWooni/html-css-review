@@ -1,0 +1,46 @@
+/* animation-play-state */
+/* 애니메이션의 재생과 정지를 설정 */
+/* 
+  값        의미
+  running   애니메이션을 동작
+  paused    애니메이션 동작을 정지
+*/
+
+body {
+  padding: 20px;
+}
+.box {
+  width: 150px;
+  height: 100px;
+  background-color: tomato;
+  border-radius: 10px;
+  animation: size-up 3s linear infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box::before {
+  content: "running";
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.box:hover {
+  animation-play-state: paused;
+  background-color: dodgerblue;
+}
+
+.box:hover::before{
+  content: "paused";
+}
+
+@keyframes size-up {
+  0%{
+    width: 150px;
+  }
+  100%{
+    width: 100%;
+  }
+}

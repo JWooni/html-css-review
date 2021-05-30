@@ -1,0 +1,50 @@
+/* multi-columns */
+/* 일반 블록 레이아웃을 확장하여 여러 텍스트 다단으로 쉽게 정리하며, 가독성 확보 */
+
+/* columns */
+/* 다단을 정의 */
+/* 
+  값            의미
+  auto          브라우저가 단위 너비와 개수를 설정
+  column-width  단의 최적 너비를 설정
+  column-count  단의 개수를 설정
+*/
+
+/* column-width */
+/* 단의 최적 너비를 설정 */
+/* 
+  값            의미
+  auto          브라우저가 단의 너비를 설정
+  단위          px, em, cm 등 단위로 지정
+*/
+
+/* column-count */
+/* 단의 개수를 설정 */
+/* 
+  값            의미
+  auto          브라우저가 단의 개수를 설정
+  숫자          단의 개수를 설정
+*/
+
+/* column-gap */
+/* 단과 단 사이의 간격 설정 */
+/* 
+  값        의미
+  normal    브라우저가 단과 단 사이의 간격을 설정
+  단위       px, em, cm 등 단위로 지정
+*/
+
+/* column-rule */
+/* 단과 단 사이의 (구분)선을 지정 */
+/* 
+  값              의미
+  column-width    선의 두께를 지정
+  column-style    선의 종류를 지정
+  column-color    선의 색상을 지정
+*/
+p {
+  text-align: justify;
+  columns: 150px 3;
+  column-gap: 20px;
+  column-rule: 2px dashed red;
+}
