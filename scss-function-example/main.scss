@@ -1,0 +1,121 @@
+@function columns ($number: 1, $columns: 12, $width: 1200px) {
+  @return 100px;
+}
+
+.container {
+  $width: 1200px;
+  width: $width;
+
+  .item:nth-child(1) {
+    width: columns();
+  }
+
+  .item:nth-child(2) {
+    width: columns(8);
+  }
+
+  .item:nth-child(3) {
+    width: columns(3);
+  }
+}
+
+
+// @if
+@function limitSize($size) {
+  @if($size >=0 and $size <=200px) {
+    @return 200px;
+  }
+
+  @else {
+    @return 800px
+  }
+}
+
+div {
+  width: limitSize(180px);
+  height: limitSize(340px);
+}
+
+@mixin positionCenter($w, $h, $p: absolute) {
+  @if unitless(($w), #{$w}px, $W) {
+    width: $w;
+    height: $h;
+    position: $p;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.box1 {
+  @include positionCenter(10px, 20px);
+}
+
+.box2 {
+  @include positionCenter(50, 50, fixed);
+}
+
+.box3 {
+  @include pCenter(100, 200, relative);
+}
+
+
+// @for
+// 1부터 3번 반복
+@for $i from 1 through 3 {
+  .through:nth-child(#{$i}) {
+    width: 20px * $i;
+  }
+}
+
+// 1부터 3 직전까지만 반복(2번 반복)
+@for $i from 1 to 3 {
+  .to:nth-child(#{$i}) {
+    width: 20px * $i
+  }
+}
+
+
+// @each
+$fruits: (apple, orange, banana, mango);
+
+// list
+.fruits {
+  @each $fruit in fruits {
+    $index: index($fruits, $fruit);
+
+    li:nth-child(#{$index}) {
+      left: 50px * $index;
+    }
+  }
+}
+// map
+$fruits-data: (
+  apple: korea,
+  orange:china,
+  banana:japan
+);
+
+@each $fruit, $country in $fruits-data {
+  //map-keys($fruits-data)    => (apple, orange, banana)
+  //map-values($fruits-data)  => (korea, china, japan)
+  $fruits-data--key-list: map-keys($fruits-data);
+  $index: index($fruits-data--key-list, $fruit);
+  .box-#{$fruit}{
+    background-image: url("/images/#{$count}.png");
+  }
+}
+
+
+// @while
+$i: 6;
+
+@while $i>0 {
+  .item-#{$i} {
+    width: 2px * $i;
+  }
+
+  $i: $i - 2;
+}
